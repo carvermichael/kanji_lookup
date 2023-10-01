@@ -5,7 +5,12 @@ Waypoint 1: Display the first 10, with links on main kanji names. Browsing funct
 - [x] create initial page and js file
 - [x] load json file, put in a store
 - [x] create template for initial main page kanji
-- [ ] dynamically just display the data from each
-- [ ] create a router
-- [ ] router init --> click event for all links on page
-- [ ] get href value for each
+- [x] dynamically just display the data from each
+- [x] create a router
+- [x] router init --> click event for all links on page
+- [x] get href value for each
+
+
+Random:
+- [x] sort by frame number (use data attributes) --> ended up caching elements in array, get this for free
+- [ ] create map from keyword to all elements that have component (start with just array lookup, then see if there's a speed-up with a map)
