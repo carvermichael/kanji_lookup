@@ -1,6 +1,7 @@
 import ElementStore from './store.js'
 import Router from './router.js'
 import fetch_data from './kanji_data.js';
+import search_init from './search.js';
 
 window.app = {};
 app.Router = Router;
@@ -14,5 +15,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 
 	app.Router.init();
 	app.Router.go('/');
+
+	search_init();
 });
 

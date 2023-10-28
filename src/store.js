@@ -5,9 +5,7 @@ class ElementStore {
 		console.log('elementStore constructor complete');
 	}
 
-	async init() {
-		console.log(`loaded kanji: ${this.kanji_json[1034].character}`);
-
+	createKanjiElements() {
 		const template = document.getElementById('kanji-template');
 
 		this.kanji_json.forEach(kanji => {
@@ -27,19 +25,33 @@ class ElementStore {
 				app.Router.go(dest_number);
 			})
 
-			const character = copy.querySelector('.character');
-			character.innerText = `${kanji.character}`;	
+			if (kanji.character) {
+				const character = copy.querySelector('.character');
+				character.innerText = `${kanji.character}`;	
+			}
 
-			const keyword = copy.querySelector('.keyword')
-			keyword.innerText = `${kanji.keyword}`;	
+			if (kanji.keyword) {
+				const keyword = copy.querySelector('.keyword')
+				keyword.innerText = `${kanji.keyword}`;	
+			}
 
-			const components = copy.querySelector('.components')
-			components.innerText = `${kanji.components}`;	
+			if (kanji.components) {
+				const components = copy.querySelector('.components')
+				components.innerText = `${kanji.components}`;	
+			}
 
 			this.elements[kanji.number] = section;
 		});
+	}
+
+	async init() {
+		console.log(`loaded kanji: ${this.kanji_json[1034].character}`);
+
+		this.createKanjiElements();
+
 		console.log('elementStore init complete');
 	}
+	
 }
 
 export default ElementStore;
