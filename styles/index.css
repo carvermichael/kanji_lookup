@@ -1,0 +1,46 @@
+body {
+  display: grid;
+  grid-template-columns: 1fr 600px 1fr;
+  grid-template-rows: repeat(2, 100px) 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
+}
+
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.kanji-block {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  overflow: hidden; /* Keeps the content from overflowing */
+  text-overflow: ellipsis; /* Adds '...' to overflowed text */
+  white-space: nowrap; /* Keeps text in a single line */
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+section > a > li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#search {
+  text-align: center;
+}
+
+
