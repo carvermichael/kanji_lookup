@@ -14,13 +14,12 @@ class ElementStore {
 			const section = copy.querySelector('section')
 			section.setAttribute('data-id', `${kanji.number}`);
 
-			const link = copy.querySelector('a');
+			const link = copy.querySelector('.kanji-link');
 			link.setAttribute('href', kanji.number);	
 			link.addEventListener('click', (event) => {
 				event.preventDefault();
 
 				const dest_number = link.getAttribute('href');
-				console.log(dest_number);
 
 				app.Router.go(dest_number);
 			})
@@ -35,10 +34,10 @@ class ElementStore {
 				keyword.innerText = `${kanji.keyword}`;	
 			}
 
-			if (kanji.components) {
-				const components = copy.querySelector('.components')
-				components.innerText = `${kanji.components}`;	
-			}
+			// if (kanji.components) {
+			// 	const components = copy.querySelector('.components')
+			// 	components.innerText = `${kanji.components}`;	
+			// }
 
 			this.elements[kanji.number] = section;
 		});

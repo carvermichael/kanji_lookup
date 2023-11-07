@@ -15,6 +15,7 @@ const Router = {
 
 			const search_element = document.createElement('input');
 			search_element.type = "text";
+			search_element.placeholder = "Enter Keyword or Component Here";
 
 			search_element.addEventListener('input', (event) => {
 				console.log(search_element.value);

@@ -5,13 +5,14 @@
 	<!-- prevent favicon call -->
 	<link rel="icon" href="data:;base64," type="image/x-icon">
 
+	<meta charset="UTF-8">
 	<script src="src/app.js" defer type="module"></script>
 	<link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
 	<div></div>
 	<div>
-		<header>Uhhhh, a header???</header>
+		<header>Kanji Lookup</header>
 		<div id="search"></div>
 		<main></main>
 	</div>
@@ -19,10 +20,12 @@
 
 	<template id="kanji-template">
 		<section class="kanji-block">
-			<a href="#">
+			<a class="kanji-link">
 				<h1 class="character"></h3>
 				<p class="keyword"></p>
-				<li class="components"></li>
+				<!-- <div class="components-wrapper"> -->
+				<!-- 	<li class="components"></li> -->
+				<!-- </div> -->
 			</a>
 		</section>
 	</template>
