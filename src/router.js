@@ -1,15 +1,19 @@
-const Router = {
-	init: () => {
+class Router {
+	init() {
 		window.addEventListener('popstate', (event) => {
-			Router.go(event.state, false);
+			this.go(event.state, false);
 		})
-	},
-	go: (route, addToHistory = true) => {
+		this.base_path = window.location.href;
+	}
+
+	go(route, addToHistory = true) {
+		console.log(this.base_path);
+
 		if (addToHistory) {
-			history.pushState(route, null, route);
+			history.pushState(route, null, this.base_path + route);
 		}
 
-		if (route == '/') {
+		if (route == '') {
 			const search_div = document.querySelector('#search');
 			search_div.innerHTML = '';
 
