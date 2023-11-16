@@ -5,8 +5,11 @@ const Router = {
 		})
 	},
 	go: (route, addToHistory = true) => {
+		console.log("path?: " + window.location.pathname);
+		const current_path = window.location.pathname;
+
 		if (addToHistory) {
-			history.pushState(route, null, route);
+			history.pushState(route, null, 'kanji_lookup' + route);
 		}
 
 		if (route == '/') {
