@@ -5,11 +5,8 @@ const Router = {
 		})
 	},
 	go: (route, addToHistory = true) => {
-		console.log("path?: " + window.location.pathname);
-		const current_path = window.location.pathname;
-
 		if (addToHistory) {
-			history.pushState(route, null, 'kanji_lookup' + route);
+			history.pushState(route, null, route);
 		}
 
 		if (route == '/') {
@@ -18,7 +15,6 @@ const Router = {
 
 			const search_element = document.createElement('input');
 			search_element.type = "text";
-			search_element.placeholder = "Enter Keyword or Component Here";
 
 			search_element.addEventListener('input', (event) => {
 				console.log(search_element.value);
