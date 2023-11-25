@@ -1,11 +1,5 @@
 
 const search = (term) => {
-	/*
-	 * TODO: 
-	 *	Starting with the naive solution here: flip through current objects, match, and manipulate DOM from here. Eventually, I'd want the following improvements:
-	 *	1. create central place for DOM manipulations --> pass an index list to that
-	 *	2. switch store from array of objects to object of arrays (measure perf diff)
-	 */
 	const main_node = document.querySelector('main');
 	main_node.innerHTML = '';
 
