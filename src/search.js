@@ -18,7 +18,7 @@ const search = (term) => {
 
 	const matching_elements = [];
 	app.ElementStore.kanji_json.forEach((kanji) => {
-		if (kanji.keyword.includes(term)) {
+		if (kanji.character.includes(term) || kanji.keyword.includes(term)) {
 			matching_elements.push(app.ElementStore.elements[kanji.number]);
 		} else if(kanji.components) {
 			if (kanji.components.some((component) => {
