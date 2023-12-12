@@ -3,7 +3,6 @@ header {
   margin-top: 20px; /* Or whatever value looks good to give some top space */
 }
 
-
 body {
   display: grid;
   grid-template-columns: 1fr 600px 1fr;
@@ -38,11 +37,11 @@ main {
 }
 
 .kanji-block {
-  width: 100px;
+  width: 500px;
   height: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   border: 1px solid #333;
   border-radius: 8px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
@@ -53,8 +52,13 @@ main {
   color: #333;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  /* grid-template-rows: repeat(2, 100px) 1fr; */
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; 
 }
 
 .character {
@@ -75,7 +79,11 @@ main {
   line-height: 1.2; /* Adjust the line height to ensure readability */
 }
 
-section > a > li {
+.components {
+  list-style: none;
+}
+
+section > li {
   list-style: none;
 }
 

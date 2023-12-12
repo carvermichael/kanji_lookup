@@ -34,10 +34,10 @@ class ElementStore {
 				keyword.innerText = `${kanji.keyword}`;	
 			}
 
-			// if (kanji.components) {
-			// 	const components = copy.querySelector('.components')
-			// 	components.innerText = `${kanji.components}`;	
-			// }
+			if (kanji.components) {
+				const components = copy.querySelector('.components')
+				components.innerText = `${kanji.components}`;	
+			}
 
 			this.elements[kanji.number] = section;
 		});
